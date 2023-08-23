@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-color-primary text-color-white tracking-wider"  >
-   <header>
+   <header class="sticky top-0 z-50">
     <nav class="container flex justify-between items-center">
         <div class="py-5 text-color-secondary font-bold text-3xl">
             <a href="#home">
@@ -34,17 +34,18 @@
             <i class="fa-solid fa-bars" ></i>
         </div>
 
-        <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0" >
-            <ul class="h-full grid place-items-center py-20" >
-                <li><a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
-                <li><a id="hLink" href="#pricing" class="hover:text-color-secondary ease-in duration-200" >Pricing</a></li>
-                <li><a id="hLink" href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
-                <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
-                <li><a id="hLink" href="#blog" class="hover:text-color-secondary ease-in duration-200">Blog</a></li>
-                <li><a id="hLink" href="#pricing"class="hover:text-color-secondary ease-in duration-200">Pricing</a></li>     
-                <li><button class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Try Now</button></li>           
-            </ul>
-        </div>
+       <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center py-20">
+                    <li><a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                    <li><a id="hLink" href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
+                    <li><a id="hLink" href="#testimonial" class="hover:text-color-secondary ease-in duration-200">Testimonial</a></li>
+                    <li><a id="hLink" href="#pricing" class="hover:text-color-secondary ease-in duration-200">Pricing</a></li>
+                    <li><a id="hLink" href="#blog" class="hover:text-color-secondary ease-in duration-200">Blog</a></li>
+                    <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
+
+                    <li><button class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">free trial</button></li>
+                </ul>
+            </div>
     </nav>
    </header>
 
@@ -225,21 +226,54 @@
             <!--Review Container-->
             <div class="mt-8" >
                 <div class="flex items-center justify-center flex-wrap" >
-                    <img src="img/user1.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
-                    <img src="img/user2.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
-                    <img src="img/user3.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
-                    <img src="img/user4.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
-                    <img src="img/user5.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+                    <img src="img/user1.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic" onclick="showReview()">
+                    <img src="img/user2.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                    <img src="img/user3.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                    <img src="img/user4.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                    <img src="img/user5.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
                 </div>
 
-                <div class="grid place-items-center text-center m-auto md:w-1/2" >
-                    <div>
-                        <p>"This should be used to tell a story and include any testimonials
+                <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]" >
+                    <div class="user-text active-text">
+                        <p class="md:2xl mb-6">"This should be used to tell a story and include any testimonials
                         you might have about your product or service for your clients"!
                         </p>
-                        <h4>Markin Nesus</h4>
+                        <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
                         <p>IOS developer</p>
                     </div>
+
+                    <div class="user-text">
+                        <p class="md:2xl mb-6">"This should be used to tell a story and include any testimonials
+                        you might have about your product or service for your clients"!
+                        </p>
+                        <h4 class="font-bold text-color-secondary mb-1">John Doe</h4>
+                        <p>React developer</p>
+                    </div>
+
+                    <div class="user-text">
+                        <p class="md:2xl mb-6">"This should be used to tell a story and include any testimonials
+                        you might have about your product or service for your clients"!
+                        </p>
+                        <h4 class="font-bold text-color-secondary mb-1">Patrick Koman</h4>
+                        <p>Android developer</p>
+                    </div>
+
+                    <div class="user-text">
+                        <p class="md:2xl mb-6">"This should be used to tell a story and include any testimonials
+                        you might have about your product or service for your clients"!
+                        </p>
+                        <h4 class="font-bold text-color-secondary mb-1">Mike Joe</h4>
+                        <p>Flutter developer</p>
+                    </div>
+
+                    <div class="user-text">
+                        <p class="md:2xl mb-6">"This should be used to tell a story and include any testimonials
+                        you might have about your product or service for your clients"!
+                        </p>
+                        <h4 class="font-bold text-color-secondary mb-1">Mike Joe</h4>
+                        <p>NodeJs developer</p>
+                    </div>
+
                 </div>
 
             </div>
